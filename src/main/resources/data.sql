@@ -1,0 +1,5 @@
+INSERT INTO GAME (TITLE, GENRE, PLATFORM, PRICE) VALUES ('Elden Ring', 'RPG', 'PC', 59.99);
+INSERT INTO GAME (TITLE, GENRE, PLATFORM, PRICE) VALUES ('Hades', 'Roguelike', 'PC', 24.99);
+INSERT INTO GAME (TITLE, GENRE, PLATFORM, PRICE) VALUES ('Zelda: Tears of the Kingdom', 'Adventure', 'Switch', 69.99);
+INSERT INTO GAME (TITLE, GENRE, PLATFORM, PRICE) VALUES ('Hollow Knight', 'Metroidvania', 'PC', 14.99);
+INSERT INTO GAME (TITLE, GENRE, PLATFORM, PRICE) VALUES ('God of War Ragnarok', 'Action', 'PS5', 69.99);

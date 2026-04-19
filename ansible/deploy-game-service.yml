@@ -1,6 +1,5 @@
 ---
 - hosts: docker-host
-  become: true
   tasks:
     - name: Stop existing container
       command: docker stop game-service-container

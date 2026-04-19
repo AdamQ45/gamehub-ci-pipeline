@@ -1,2 +1,2 @@
 [docker-host]
-172.31.39.71 ansible_user=ansadmin ansible_password=ansadmin ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+172.31.39.71 ansible_user=ansadmin ansible_password=ansadmin ansible_become_password=ansadmin ansible_ssh_common_args='-o StrictHostKeyChecking=no'

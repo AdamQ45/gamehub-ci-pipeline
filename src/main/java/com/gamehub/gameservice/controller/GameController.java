@@ -1,5 +1,7 @@
 package com.gamehub.gameservice.controller;
 
+// GameController - REST API for game management
+
 import com.gamehub.gameservice.client.PlayerClient;
 import com.gamehub.gameservice.config.GameHubConfig;
 import com.gamehub.gameservice.dto.PlayerDto;

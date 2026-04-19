@@ -1,0 +1,23 @@
+---
+- hosts: docker-host
+  become: true
+  tasks:
+    - name: Stop existing container
+      command: docker stop game-service-container
+      ignore_errors: yes
+
+    - name: Remove existing container
+      command: docker rm game-service-container
+      ignore_errors: yes
+
+    - name: Remove existing image
+      command: docker rmi game-service-image
+      ignore_errors: yes
+
+    - name: Build Docker image
+      command: docker build -t game-service-image /opt/docker/
+      args:
+        chdir: /opt/docker
+
+    - name: Create container from image
+      command: docker run -d --name game-service-container -p 8081:8081 game-service-image

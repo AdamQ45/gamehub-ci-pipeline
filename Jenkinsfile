@@ -94,8 +94,12 @@ pipeline {
                         configName: 'ansible-server',
                         transfers: [
                             sshTransfer(
-                                sourceFiles: 'target/game-service-0.0.1-SNAPSHOT.jar,Dockerfile',
+                                sourceFiles: 'target/game-service-0.0.1-SNAPSHOT.jar',
                                 removePrefix: 'target',
+                                remoteDirectory: '/opt/docker'
+                            ),
+                            sshTransfer(
+                                sourceFiles: 'Dockerfile',
                                 remoteDirectory: '/opt/docker'
                             )
                         ]
@@ -106,16 +110,7 @@ pipeline {
 
         stage('Deploy - Ansible') {
             steps {
-                sshPublisher(publishers: [
-                    sshPublisherDesc(
-                        configName: 'ansible-server',
-                        transfers: [
-                            sshTransfer(
-                                execCommand: 'ansible-playbook /opt/docker/deploy-game-service.yml -i /opt/docker/hosts'
-                            )
-                        ]
-                    )
-                ])
+                sh 'ansible-playbook ansible/deploy-game-service.yml -i ansible/hosts'
             }
         }
     }

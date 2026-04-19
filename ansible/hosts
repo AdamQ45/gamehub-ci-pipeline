@@ -1,3 +1,2 @@
 [docker-host]
-# Replace with your Docker Host EC2 private IP
-172.31.39.71 ansible_user=ansadmin
+172.31.39.71 ansible_user=ansadmin ansible_password=ansadmin ansible_ssh_common_args='-o StrictHostKeyChecking=no'

@@ -14,9 +14,9 @@
       ignore_errors: yes
 
     - name: Build Docker image
-      command: docker build -t game-service-image /opt/docker/
+      command: docker build -t game-service-image /home/ansadmin/opt/docker/
       args:
-        chdir: /opt/docker
+        chdir: /home/ansadmin/opt/docker
 
     - name: Create container from image
       command: docker run -d --name game-service-container -p 8081:8081 game-service-image

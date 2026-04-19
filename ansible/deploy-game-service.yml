@@ -19,4 +19,4 @@
         chdir: /home/ansadmin/opt/docker
 
     - name: Create container from image
-      command: docker run -d --name game-service-container -p 8081:8081 game-service-image
+      command: docker run -d --name game-service-container -p 8081:8080 game-service-image

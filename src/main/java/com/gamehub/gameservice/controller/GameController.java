@@ -1,6 +1,7 @@
 package com.gamehub.gameservice.controller;
 
 // GameController - REST API for game management
+// Version: 1.1 - Added CI/CD pipeline integration
 
 import com.gamehub.gameservice.client.PlayerClient;
 import com.gamehub.gameservice.config.GameHubConfig;
